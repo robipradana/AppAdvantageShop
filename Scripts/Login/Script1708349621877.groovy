@@ -19,3 +19,5 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('', false)
 
+Mobile.tap(findTestObject(null), 0)
+
