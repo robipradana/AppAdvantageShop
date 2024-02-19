@@ -19,3 +19,5 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('', false)
 
+Mobile.setText(findTestObject(null), '', 0)
+
