@@ -21,3 +21,5 @@ Mobile.startApplication('', false)
 
 Mobile.tap(findTestObject(null), 0)
 
+Mobile.closeApplication()
+
