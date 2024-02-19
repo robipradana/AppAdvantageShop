@@ -21,3 +21,5 @@ Mobile.startApplication('', false)
 
 Mobile.setText(findTestObject(null), '', 0)
 
+Mobile.tap(findTestObject(null), 0)
+
