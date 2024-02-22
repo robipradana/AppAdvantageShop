@@ -19,29 +19,63 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('AppShop/Advantagedemo3.2.apk', false)
 
-Mobile.tap(findTestObject('AppShop/Menu'), 0)
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - Advantage'), 'Advantage')
 
-Mobile.tap(findTestObject('AppShop/Login'), 0)
+Mobile.tap(findTestObject('Checkout Headphone/Menu'), 0)
 
-Mobile.setText(findTestObject('AppShop/Input Username'), 'robipm', 0)
+Mobile.verifyElementText(findTestObject('Checkout Headphone/Login'), 'LOGIN')
 
-Mobile.setText(findTestObject('AppShop/Input Password'), 'Sukses1', 0)
+Mobile.tap(findTestObject('Checkout Headphone/Login'), 0)
 
-Mobile.tap(findTestObject('AppShop/Login 2'), 0)
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - USER NAME'), 'USER NAME')
 
-Mobile.tap(findTestObject('AppShop/Headphone'), 0)
+Mobile.setText(findTestObject('Checkout Headphone/Input Username'), 'robipm', 0)
 
-Mobile.tap(findTestObject('AppShop/BEATS STUDIO 2 OVER-EAR MATTE BLACK HEADPHONES'), 0)
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - PASSWORD'), 'PASSWORD')
 
-Mobile.tap(findTestObject('AppShop/ADD TO CART'), 0)
+Mobile.setText(findTestObject('Checkout Headphone/Input Password'), 'Sukses1', 0)
 
-Mobile.tap(findTestObject('AppShop/CART'), 0)
+Mobile.tap(findTestObject('Checkout Headphone/Login 2'), 0)
 
-Mobile.tap(findTestObject('AppShop/CHECKOUT (PAY 179.99)'), 0)
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - LAPTOPS'), 'LAPTOPS')
 
-Mobile.tap(findTestObject('AppShop/PAY NOW'), 0)
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - HEADPHONES'), 'HEADPHONES')
 
-Mobile.tap(findTestObject('AppShop/CLOSE X'), 0)
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - TABLETS'), 'TABLETS')
+
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - SPEAKERS'), 'SPEAKERS')
+
+Mobile.tap(findTestObject('Checkout Headphone/Headphone'), 0)
+
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - Headphones (64)'), 'Headphones (64)')
+
+Mobile.tap(findTestObject('Checkout Headphone/BEATS STUDIO 2 OVER-EAR MATTE BLACK HEADPHONES'), 0)
+
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/Description Beats Studio 2 Over-Ear'), 'The world’s most famous headphone has been completely redesigned and reimagined. The new Beats Studio® is lighter, sexier, stronger, and more comfortable, with precision sound, Adaptive Noise Canceling, a 20-hour rechargeable battery, and RemoteTalk™. It has all the energy and excitement you expect from Beats, plus a powerful, reengineered sound.')
+
+Mobile.tap(findTestObject('Checkout Headphone/ADD TO CART'), 0)
+
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - 1'), '1')
+
+Mobile.tap(findTestObject('Checkout Headphone/CART'), 0)
+
+Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - Shopping Cart (1)'), 'Shopping Cart (1) ')
+
+Mobile.tap(findTestObject('Checkout Headphone/CHECKOUT (PAY 179.99)'), 0)
+
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - Order Payment'), 'Order Payment')
+
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - SHIPPING DETAILS'), 'SHIPPING DETAILS')
+
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - PAYMENT METHOD'), 'PAYMENT METHOD')
+
+Mobile.tap(findTestObject('Checkout Headphone/PAY NOW'), 0)
+
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - Your cart was successfully purchased'), 'Your cart was successfully purchased')
+
+Mobile.tap(findTestObject('Checkout Headphone/CLOSE X'), 0)
 
 Mobile.closeApplication()
 

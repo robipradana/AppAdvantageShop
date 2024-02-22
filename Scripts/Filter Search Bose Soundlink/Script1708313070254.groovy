@@ -19,30 +19,51 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('AppShop/Advantagedemo3.2.apk', false)
 
-Mobile.tap(findTestObject('AppShop/Menu'), 0)
+Mobile.verifyElementVisible(findTestObject('Verify Checkout Headphone/android.widget.TextView - Advantage'), 0)
 
-Mobile.tap(findTestObject('AppShop/Login'), 0)
+Mobile.tap(findTestObject('Checkout Headphone/Menu'), 0)
 
-Mobile.setText(findTestObject('AppShop/Input Username'), 'robipm', 0)
+Mobile.verifyElementText(findTestObject('Checkout Headphone/Login'), 'LOGIN')
 
-Mobile.setText(findTestObject('AppShop/Input Password'), 'Sukses1', 0)
+Mobile.tap(findTestObject('Checkout Headphone/Login'), 0)
 
-Mobile.tap(findTestObject('AppShop/Login 2'), 0)
+Mobile.verifyElementVisible(findTestObject('Checkout Headphone/Input Username'), 0)
+
+Mobile.verifyElementVisible(findTestObject('Checkout Headphone/Input Password'), 0)
+
+Mobile.setText(findTestObject('Checkout Headphone/Input Username'), 'robipm', 0)
+
+Mobile.setText(findTestObject('Checkout Headphone/Input Password'), 'Sukses1', 0)
+
+Mobile.verifyElementVisible(findTestObject('Checkout Headphone/Login 2'), 0)
+
+Mobile.tap(findTestObject('Checkout Headphone/Login 2'), 0)
+
+Mobile.delay(4)
 
 'tap search 1'
-Mobile.tap(findTestObject('Object Repository/AppShop/Filter Search Bose Soundlink/android.widget.ImageView'), 0)
+Mobile.tap(findTestObject('Object Repository/Filter Search Bose Soundlink/android.widget.ImageView'), 0)
 
 'input text in column search'
-Mobile.setText(findTestObject('Object Repository/AppShop/Filter Search Bose Soundlink/android.widget.EditText - Search'), 
-    'BOSE SOUNDLINK', 0)
+Mobile.setText(findTestObject('Object Repository/Filter Search Bose Soundlink/android.widget.EditText - Search'), 'BOSE SOUNDLINK', 
+    0)
 
 Mobile.hideKeyboard()
 
 'tap search 2'
-Mobile.tap(findTestObject('Object Repository/AppShop/Filter Search Bose Soundlink/android.widget.ImageView (1)'), 0)
+Mobile.tap(findTestObject('Object Repository/Filter Search Bose Soundlink/android.widget.ImageView (1)'), 0)
+
+Mobile.delay(6)
+
+Mobile.verifyElementVisible(findTestObject('Filter Search Bose Soundlink/android.widget.TextView - BOSE SOUNDLINK WIRELESS SPEAKER'), 
+    0)
 
 'tap bose soundlink wireless'
-Mobile.tap(findTestObject('Object Repository/AppShop/Filter Search Bose Soundlink/android.widget.RelativeLayout'), 0)
+Mobile.tap(findTestObject('Object Repository/Filter Search Bose Soundlink/android.widget.RelativeLayout'), 0)
+
+Mobile.verifyElementVisible(findTestObject('Filter Search Bose Soundlink/Detail Description Bose Soundlink Wireless'), 0)
+
+Mobile.delay(6)
 
 Mobile.closeApplication()
 

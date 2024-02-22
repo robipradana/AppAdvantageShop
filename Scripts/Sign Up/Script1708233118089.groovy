@@ -19,62 +19,100 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('AppShop/Advantagedemo3.2.apk', false)
 
+Mobile.verifyElementText(findTestObject('Verify Checkout Headphone/android.widget.TextView - Advantage'), 'Advantage')
+
 'tap menu\r\n'
-Mobile.tap(findTestObject('AppShop/Menu'), 0)
+Mobile.tap(findTestObject('Checkout Headphone/Menu'), 0)
+
+Mobile.verifyElementText(findTestObject('Checkout Headphone/Login'), 'LOGIN')
 
 'tap login\r\n'
-Mobile.tap(findTestObject('AppShop/Login'), 0)
+Mobile.tap(findTestObject('Checkout Headphone/Login'), 0)
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - Dont have an account'), 'Don\'t have an account?')
 
 'tap sign up today'
-Mobile.tap(findTestObject('Sign Up AppShop/Sign Up Today'), 0)
+Mobile.tap(findTestObject('Sign Up/Sign Up Today'), 0)
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - PERSONAL DETAILS'), 'PERSONAL DETAILS')
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - USER NAME'), 'USER NAME')
 
 'input username\r\n'
-Mobile.setText(findTestObject('Sign Up AppShop/Username'), '28zein', 0)
+Mobile.setText(findTestObject('Sign Up/Username'), '28zein', 0)
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - EMAIL'), 'EMAIL')
 
 'input email'
-Mobile.setText(findTestObject('Sign Up AppShop/Email'), 'zein28@gmail.com', 0)
+Mobile.setText(findTestObject('Sign Up/Email'), 'zein28@gmail.com', 0)
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - PASSWORD'), 'PASSWORD')
 
 'input password'
-Mobile.setText(findTestObject('Sign Up AppShop/Password'), '28Zein', 0)
+Mobile.setText(findTestObject('Sign Up/Password'), '28Zein', 0)
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - CONFIRM PASSWORD'), 'CONFIRM PASSWORD')
 
 'input confirm password'
-Mobile.setText(findTestObject('Sign Up AppShop/Confirm Password'), '28Zein', 0)
+Mobile.setText(findTestObject('Sign Up/Confirm Password'), '28Zein', 0)
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - FIRST NAME'), 'FIRST NAME')
 
 'input firstname\r\n'
-Mobile.setText(findTestObject('Sign Up AppShop/Fisrt Name'), 'Zein', 0)
+Mobile.setText(findTestObject('Sign Up/Fisrt Name'), 'Zein', 0)
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - LAST NAME'), 'LAST NAME')
 
 'input lastname'
-Mobile.setText(findTestObject('Sign Up AppShop/Last Name'), 'Arsyad', 0)
+Mobile.setText(findTestObject('Sign Up/Last Name'), 'Arsyad', 0)
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - PHONE NUMBER'), 'PHONE NUMBER')
 
 'input phone number'
-Mobile.setText(findTestObject('Object Repository/Sign Up AppShop/Phone Number'), '081243211234', 0)
+Mobile.setText(findTestObject('Object Repository/Sign Up/Phone Number'), '081243211234', 0)
 
 'scroll to text country\r\n'
 Mobile.scrollToText('COUNTRY')
 
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - COUNTRY'), 'COUNTRY')
+
 'tap country'
-Mobile.tap(findTestObject('Object Repository/Sign Up AppShop/android.widget.TextView - United States'), 0)
+Mobile.tap(findTestObject('Object Repository/Sign Up/android.widget.TextView - United States'), 0)
 
 'scroll to text indonesia'
 Mobile.scrollToText('Indonesia')
 
 'tap indonesia'
-Mobile.tap(findTestObject('Object Repository/Sign Up AppShop/android.widget.TextView - Indonesia'), 0)
+Mobile.tap(findTestObject('Object Repository/Sign Up/android.widget.TextView - Indonesia'), 0)
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - STATE'), 'STATE')
 
 'input state jawa barat\r\n'
-Mobile.setText(findTestObject('Object Repository/Sign Up AppShop/android.widget.EditText (1)'), 'Jawa Barat', 0)
+Mobile.setText(findTestObject('Object Repository/Sign Up/State'), 'Jawa Barat', 0)
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - ADDRESS 1'), 'ADDRESS')
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - ADDRESS 2'), 'ADDRESS')
 
 'input address'
-Mobile.setText(findTestObject('Object Repository/Sign Up AppShop/android.widget.EditText (2)'), 'jl teluk bayur', 0)
+Mobile.setText(findTestObject('Object Repository/Sign Up/Address'), 'jl teluk bayur', 0)
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - CITY'), 'CITY')
 
 'input city'
-Mobile.setText(findTestObject('Object Repository/Sign Up AppShop/android.widget.EditText (3)'), 'Depok', 0)
+Mobile.setText(findTestObject('Object Repository/Sign Up/City'), 'Depok', 0)
+
+Mobile.verifyElementText(findTestObject('Verify Sign Up/android.widget.TextView - ZIP'), 'ZIP')
 
 'input zip'
-Mobile.setText(findTestObject('Object Repository/Sign Up AppShop/android.widget.EditText (4)'), '654321', 0)
+Mobile.setText(findTestObject('Object Repository/Sign Up/Zip'), '654321', 0)
+
+Mobile.delay(3)
 
 'tap register'
-Mobile.tap(findTestObject('Object Repository/Sign Up AppShop/android.widget.Button - REGISTER (2)'), 0)
+Mobile.tap(findTestObject('Object Repository/Sign Up/Register'), 0)
+
+Mobile.delay(3)
 
 Mobile.closeApplication()
 

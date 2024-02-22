@@ -19,23 +19,47 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('C:\\Users\\ASUS\\Katalon Studio\\TestAppShop\\AppShop\\Advantagedemo3.2.apk', true)
 
+Mobile.verifyElementVisible(findTestObject('Verify Checkout Headphone/android.widget.TextView - Advantage'), 0)
+
 'tap laptop\r\n'
-Mobile.tap(findTestObject('Object Repository/AppShop/Laptops'), 0)
+Mobile.tap(findTestObject('Object Repository/Filter Laptop By Price/Laptops'), 0)
+
+Mobile.delay(3)
+
+Mobile.verifyElementText(findTestObject('Verify Filter Laptop/android.widget.TextView - FILTERS'), 'FILTERS')
 
 'tap filter'
-Mobile.tap(findTestObject('Object Repository/AppShop/Filters'), 0)
+Mobile.tap(findTestObject('Object Repository/Filter Laptop By Price/Filters'), 0)
+
+Mobile.delay(3)
+
+Mobile.verifyElementText(findTestObject('Verify Filter Laptop/android.widget.TextView - BY PRICE'), 'BY PRICE')
 
 'tap by price'
-Mobile.tap(findTestObject('Object Repository/AppShop/By Price'), 0)
+Mobile.tap(findTestObject('Object Repository/Filter Laptop By Price/By Price'), 0)
+
+Mobile.delay(3)
+
+Mobile.verifyElementVisible(findTestObject('Verify Filter Laptop/android.view.View'), 0)
+
+Mobile.verifyElementVisible(findTestObject('Verify Filter Laptop/android.widget.TextView - 179'), 0)
+
+Mobile.verifyElementVisible(findTestObject('Verify Filter Laptop/android.widget.TextView - 1799'), 0)
 
 'tap volume filtering price'
-Mobile.tap(findTestObject('Object Repository/AppShop/Vol Filter Price'), 0)
+Mobile.tap(findTestObject('Object Repository/Filter Laptop By Price/Vol Filter Price'), 0)
 
 'tap apply'
-Mobile.tap(findTestObject('Object Repository/AppShop/Apply Filter'), 0)
+Mobile.tap(findTestObject('Object Repository/Filter Laptop By Price/Apply Filter'), 0)
+
+Mobile.delay(2)
+
+Mobile.verifyElementVisible(findTestObject('Verify Filter Laptop/android.widget.TextView - Laptops (8)'), 0)
 
 'scroll to text HP STREAM - 11-D020NR LAPTOP\r\n'
 Mobile.scrollToText('HP STREAM - 11-D020NR LAPTOP')
+
+Mobile.verifyElementVisible(findTestObject('Verify Filter Laptop/android.widget.TextView - HP STREAM - 11-D020NR LAPTOP'), 0)
 
 Mobile.closeApplication()
 
